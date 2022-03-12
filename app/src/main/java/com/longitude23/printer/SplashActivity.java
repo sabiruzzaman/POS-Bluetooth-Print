@@ -5,7 +5,6 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import infixsoft.imrankst1221.printer.R;
 
 public class SplashActivity extends AppCompatActivity {
 

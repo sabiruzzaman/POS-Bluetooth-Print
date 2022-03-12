@@ -4,14 +4,11 @@ package com.longitude23.printer;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
-
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.Calendar;
-
 import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
 import android.util.Log;
@@ -20,15 +17,13 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.google.android.gms.ads.AdView;
 
-import infixsoft.imrankst1221.printer.R;
 
 public class MainActivity extends Activity{
     private String TAG = "Main Activity";
     EditText message;
     Button btnPrint, btnBill, btnDonate;
-    AdView viewAdmob;
+
 
     byte FONT_TYPE;
     private static BluetoothSocket btsocket;
@@ -55,13 +50,7 @@ public class MainActivity extends Activity{
                 printBill();
             }
         });
-        btnDonate.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.paypal_me)));
-                startActivity(browserIntent);
-            }
-        });
+
 
 
     }
